@@ -13,7 +13,52 @@
         "method": "GET",
         "header": []
       },
-      "response": []
+      "response": [
+        {
+          "name": "getAll",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/user",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 25 Jun 2026 09:02:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"User 0\",\n        \"age\": 29,\n        \"email\": \"we@gmail.com\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"User 3\",\n        \"age\": 20,\n        \"email\": \"u8w@gmail.com\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"User 8\",\n        \"age\": 20,\n        \"email\": \"u99w@gmail.com\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"User 0\",\n        \"age\": 20,\n        \"email\": \"8299w@gmail.com\"\n    }\n]"
+        }
+      ]
     },
     {
       "name": "getUser",
@@ -21,7 +66,53 @@
         "method": "GET",
         "header": []
       },
-      "response": []
+      "response": [
+        {
+          "name": "getUser",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/user/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 25 Jun 2026 09:03:09 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"name\": \"User 0\",\n    \"age\": 29,\n    \"email\": \"we@gmail.com\"\n}"
+        }
+      ]
     },
     {
       "name": "addUser",
@@ -29,7 +120,61 @@
         "method": "GET",
         "header": []
       },
-      "response": []
+      "response": [
+        {
+          "name": "addUser",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":5,\r\n    \"name\":\"User 0\",\r\n    \"age\":20,\r\n    \"email\":\"8299w@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/user",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 25 Jun 2026 09:02:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User added succussfully.\"\n}"
+        }
+      ]
     },
     {
       "name": "deleteUser",
@@ -37,7 +182,53 @@
         "method": "GET",
         "header": []
       },
-      "response": []
+      "response": [
+        {
+          "name": "deleteUser",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/user/5",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user",
+                "5"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 25 Jun 2026 09:03:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"This user has been deleted\"\n}"
+        }
+      ]
     },
     {
       "name": "editUser",
@@ -45,7 +236,62 @@
         "method": "GET",
         "header": []
       },
-      "response": []
+      "response": [
+        {
+          "name": "editUser",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"User 0\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/user/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "user",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 25 Jun 2026 09:03:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User has been updated.\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"User 0\",\n        \"age\": 29,\n        \"email\": \"we@gmail.com\"\n    }\n}"
+        }
+      ]
     }
   ]
 }
